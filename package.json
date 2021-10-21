@@ -106,7 +106,7 @@
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git://github.com/konvajs/konva.git"
+    "url": "git://github.com/TrackTak/konva.git"
   },
   "license": "MIT"
 }
