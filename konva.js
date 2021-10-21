@@ -8,7 +8,7 @@
    * Konva JavaScript Framework v8.2.2
    * http://konvajs.org/
    * Licensed under the MIT
-   * Date: Wed Oct 06 2021
+   * Date: Thu Oct 21 2021
    *
    * Original work Copyright (C) 2011 - 2013 by Eric Rowell (KineticJS)
    * Modified work Copyright (C) 2014 - present by Anton Lavrenov (Konva)
@@ -737,7 +737,7 @@
           }
           else if (color.substr(0, 4) === RGB_PAREN) {
               // rgb string
-              rgb = RGB_REGEX.exec(color.replace(/ /g, ''));
+              rgb = RGB_REGEX.exec(color.replace(' ', ''));
               return {
                   r: parseInt(rgb[1], 10),
                   g: parseInt(rgb[2], 10),
@@ -3672,7 +3672,7 @@
           if (typeof selector === 'function') {
               return selector(this);
           }
-          var selectorArr = selector.replace(/ /g, '').split(','), len = selectorArr.length, n, sel;
+          var selectorArr = selector.split(' ').join('').split(','), len = selectorArr.length, n, sel;
           for (n = 0; n < len; n++) {
               sel = selectorArr[n];
               if (!Util.isValidSelector(sel)) {
